@@ -1,32 +1,83 @@
-const {readFile, writeFile} = require('fs')
+// const {readFile, writeFile} = require('fs')
 
-readFile('./content/first.txt', 'utf-8', (err, result) => {
-    if(err){
-        console.log(err)
-        return;
-    }
-    // console.log(result)
-    const first = result;
-    readFile('./content/secound.txt', 'utf-8', (err, result) => {
-        if(err) {
-            console.log(err)
-            return;
-        }
-        const secound = result
-        writeFile(
-            './content/third.txt',
-            `Here IS THE RESULT : ${first}, ${secound}`,
-            (err, result) => {
-                if(err){
-                console.log(err)
-                return;
-                }else{
-                    console.log(result)
-                }
-            }
-        )
-    })
-})
+// console.log('Start')
+// readFile('./content/first.txt', 'utf-8', (err, result) => {
+//     if(err){
+//         console.log(err)
+//         return;
+//     }
+//     // console.log(result)
+//     const first = result;
+//     readFile('./content/secound.txt', 'utf-8', (err, result) => {
+//         if(err) {
+//             console.log(err)
+//             return;
+//         }
+//         const secound = result
+//         writeFile(
+//             './content/third.txt',
+//             `Here IS THE RESULT : ${first}, ${secound}`,
+//             (err, result) => {
+//                 if(err){
+//                 console.log(err)
+//                 return;
+//                 }else{
+//                     // console.log(result)
+//                     console.log('Done with this task')
+//                 }
+//             }
+//         )
+//     })
+// })
+// console.log('Starting the next one')
+
+// const {readFileSync, writeFileSync} = require('fs');
+
+// console.log('Start')
+
+// const first = readFileSync('./content/first.txt', 'utf-8')
+// const secound = readFileSync('./content/secound.txt', 'utf-8')
+
+// console.log(first, secound)
+
+// writeFileSync(
+//     './content/third.txt', 
+//     `hello world ${first}, ${secound}`,
+//     {flag: 'a'}
+// )
+
+// console.log('Done with this task')
+// console.log('Starting the next one')
+
+// const {readFile, writeFile} = require('fs')
+
+// readFile('./content/first.txt', 'utf-8', (err, result) => {
+//     if(err){
+//         console.log(err)
+//         return;
+//     }
+//     // console.log(result)
+//     const first = result;
+//     readFile('./content/secound.txt', 'utf-8', (err, result) => {
+//         if(err) {
+//             console.log(err)
+//             return;
+//         }
+//         const secound = result
+//         writeFile(
+//             './content/third.txt',
+//             `Here IS THE RESULT : ${first}, ${secound}`,
+//             (err, result) => {
+//                 if(err){
+//                 console.log(err)
+//                 return;
+//                 }else{
+//                     console.log(result)
+//                 }
+//             }
+//         )
+//     })
+// })
 
 // const {readFileSync, writeFileSync} = require('fs');
 
