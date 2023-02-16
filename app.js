@@ -1,3 +1,33 @@
+const {readFile, writeFile} = require('fs')
+
+readFile('./content/first.txt', 'utf-8', (err, result) => {
+    if(err){
+        console.log(err)
+        return;
+    }
+    // console.log(result)
+    const first = result;
+    readFile('./content/secound.txt', 'utf-8', (err, result) => {
+        if(err) {
+            console.log(err)
+            return;
+        }
+        const secound = result
+        writeFile(
+            './content/third.txt',
+            `Here IS THE RESULT : ${first}, ${secound}`,
+            (err, result) => {
+                if(err){
+                console.log(err)
+                return;
+                }else{
+                    console.log(result)
+                }
+            }
+        )
+    })
+})
+
 // const {readFileSync, writeFileSync} = require('fs');
 
 // const first = readFileSync('./content/first.txt', 'utf-8')
